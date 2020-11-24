@@ -1,4 +1,7 @@
 package exp5;
+
+import java.util.Scanner;
+
 public class Triangle {
     double side1 = 1.0;
     double side2 = 1.0;
@@ -25,7 +28,31 @@ public class Triangle {
         double p = (side1 + side2 + side3) / 2;
         return Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
     }
-
+    
+    public double getside1(){return side1;}    
+    public double getside2(){return side2;}    
+    public double getside3(){return side3;}    
+    public void setside1(double s1){side1 = s1;}    
+    public void setside2(double s2){side2 = s2;}    
+    public void setside3(double s3){side3 = s3;}
+    public String toString()
+    {
+        return "Triangle: ["+side1+", "+side2+", "+side3+"]; Perimeter: "+(getside1()+getside2()+getside3())+ "; Area: "+getArea();
+    }    
+    
+    //为什么这里的static的main函数可以调用不是静态的构造函数
+    public static void main(String[] args) throws IllegalTriangleException{
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please input side1 of the triangle:");
+        double a = input.nextDouble();
+        System.out.print("Please input side2 of the triangle:");
+        double b = input.nextDouble();
+        System.out.print("Please input side3 of the triangle:");
+        double c = input.nextDouble();
+        Triangle tri = new Triangle(a,b,c);
+        System.out.println(tri.toString());
+        input.close();
+    }
 }
 
 class IllegalTriangleException extends Exception {

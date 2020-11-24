@@ -1,3 +1,5 @@
+package exp2;
+
 import java.util.Scanner;
 public class SRP {
     public static void main(String[] args)

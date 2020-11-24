@@ -1,3 +1,5 @@
+package exp4;
+
 import java.util.Scanner;
 
 public class Gomoku {
