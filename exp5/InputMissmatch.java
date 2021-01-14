@@ -1,5 +1,4 @@
 package exp5;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class InputMissmatch {
@@ -7,10 +6,8 @@ public class InputMissmatch {
     {
         sumTwoIntegers();
     }
-
     private static void sumTwoIntegers()
     {
-        
         Scanner input = null;
         try 
         {
@@ -31,5 +28,4 @@ public class InputMissmatch {
             input.close();
         }
     }
-    
 }
